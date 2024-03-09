@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tasks</title>
+</head>
+<body>
+    {{ user }}
+    <a href="{% url 'logout' %}"><button type="submit">Выйти</button></a>
+        {% for task in tasks %}
+            <ul>
+                <a href="{% url 'task_detail' pk=task.pk %}"><li>{{ task.title }}</li></a>
+            </ul>
+        {% endfor %}
+    <a href="{% url 'add_task' %}"><button type="submit">Добавить задание</button></a>
+</body>
+</html>
