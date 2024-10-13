@@ -1,5 +1,5 @@
 from django.test import TestCase
-import requests
+# import requests
 
 # data = {'username': 'zxc', 'password': 'zxc'}
 
